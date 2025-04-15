@@ -19,15 +19,15 @@ public class Station {
     }
 
     public void addEntry(Station s, Service service, String startTime, String endTime) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        LocalTime st = LocalTime.parse(startTime, formatter);
-        LocalTime et = LocalTime.parse(endTime, formatter);
         ArrayList<Journey> schedule = timetable.get(s);
+        int st = startTime.equals("null") ? -1 : Integer.parseInt(startTime);
+        int et = endTime.equals("null") ? -1 : Integer.parseInt(endTime);
         if (schedule == null) {
             schedule = new ArrayList<>();
             timetable.put(s, schedule);
         }
-        schedule.add(new Journey(this, s, st, et, service));
+        if (st != -1 && et != -1 && !s.equals(Service.ERROR))
+            schedule.add(new Journey(this, s, st, et, service));
     }
 
     public String toString() {

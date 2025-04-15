@@ -5,11 +5,11 @@ import java.time.LocalTime;
 public class Journey {
     public Station start;
     public Station end;
-    public LocalTime departure;
-    public LocalTime arrival;
+    public int departure;
+    public int arrival;
     public Service service;
 
-    public Journey(Station start, Station end, LocalTime departure, LocalTime arrival, Service service) {
+    public Journey(Station start, Station end, int departure, int arrival, Service service) {
         this.start = start;
         this.end = end;
         this.departure = departure;
