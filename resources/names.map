@@ -1,13 +1,281 @@
-"place_MLPT":"PS_MILP"
-"place_EMBR":"Metro Embarcadero Station"
-"place_POWL":"Metro Powell Station/Downtown","Metro Powell Station/Outbound","Union Square/Market St Station Northbound","Union Square/Market St Station Southbound"
-"place_CIVC":"Metro Civic Center Station/Downtn","Metro Civic Center Station/Outbd"
-"place_BALB":"Balboa Park BART/Mezzanine Level","San Jose Ave & Geneva Ave","San Jose Ave & Niagra Ave"
-"place_MONT":"Market St & New Montgomery St","Metro Montgomery Station/Outbound","Metro Montgomery Station/Downtown","California St & Montgomery St"
-"PS_TAMN":"tamien"
-"PS_DIRD":"sj_diridon"
-"PS_MVTC":"mountain_view"
-"san_francisco":"4th St & King St","King St & 4th St"
-"VNS":"Metro Van Ness Station","Van Ness Station Outbound"
-"CRC":"Metro Church Station/Outbound","Metro Church Station/Downtown","Church St & Market St"
-"SFZ":"Wawona/46th Ave /SF Zoo","47th Ave & Cutler Ave"
+Right Of Way/Eucalyptus Dr:
+Judah St & Funston Ave:
+place_MLPT:
+PS_FRTD:
+place_BERY:
+Ocean Ave & San Leandro Way:
+PS_BLSM:
+Orizaba Ave & Broad St:
+PS_VIRG:
+redwood_city:
+West Portal Ave & 14th Ave:
+lawrence:
+Randolph St & Arch St:
+UCSF / Chase Center (16th St):
+place_HAYW:
+PS_CMBL:
+PS_CURT:
+Ocean Ave & Lee St:
+PS_METR:
+place_BALB:
+Third Street/Oakdale/Palou:
+Judah St & 28th Ave:
+palo_alto:
+PS_BRNM:
+Bayshore Blvd & Sunnydale Ave:
+46th Ave & Taraval St:
+place_WCRK:
+santa_clara:
+place_FTVL:
+PS_MILP:place_MLPT
+south_sf:
+4th St & King St:
+san_bruno:
+19th Ave & Winston Dr:
+PS_WINC:
+Forest Hill Station Outbound:
+san_antonio:
+Metro Embarcadero Station:place_EMBR
+Church St & 24th St:
+place_WDUB:
+UCSF Medical Center (Mariposa):
+tamien:
+Church St & Day St:
+place_PLZA:
+belmont:
+Third Street/Gilman/Paul:
+PS_ALUM:
+PS_ALDR:
+Junipero Serra Blvd & Ocean Ave:
+Balboa Park BART/Mezzanine Level:place_BALB
+Ocean Ave & Victoria St:
+place_PITT:
+PS_MVTC:
+place_24TH:
+place_MCAR:
+PS_MOFF:
+Saint James Station:
+PS_CDMS:
+Irving St & 2nd Ave:
+gilroy:
+Irving St & 8th Ave:
+46th Ave & Vicente St:
+place_MLBR:
+PS_GRML:
+46th Ave & Ulloa St:
+morgan_hill:
+Ocean Ave & Miramar Ave:
+Third Street/Hudson/Innes:
+Judah St & 19th Ave:
+San Jose Ave & Santa Ynez Ave:
+San Jose Ave & Santa Rosa Ave:
+Taraval St & 26th Ave:
+Broad St & Orizaba Ave:
+place_12TH:
+Taraval St & 19th Ave:
+PS_CPTL:
+Yerba Buena/Moscone Station Northbound:
+Broad St & Plymouth Ave:
+PS_WHIS:
+Church St & 28th St:
+19th Ave & Junipero Serra Blvd:
+burlingame:
+place_ORIN:
+PS_HOST:
+place_GLEN:
+Metro Montgomery Station/Outbound:place_MONT
+Taraval St & 46th Ave:
+Right Of Way/18th St:
+place_NCON:
+San Antonio Station:
+PS_CIVC:
+The Embarcadero & Folsom St:
+Judah/La Playa/Ocean Beach:
+place_WARM:
+san_mateo:
+PS_REAM:
+PS_ORCH:
+Third Street & Evans Ave:
+PS_TASM:
+Union Square/Market St Station Southbound:
+Judah St & 34th Ave:
+Ocean Ave & Jules Ave:
+Duboce Ave & Church St:
+PS_BAYP:
+Right Of Way/Liberty St:
+Taraval St & 32nd Ave:
+Taraval St & Sunset Blvd:
+PS_JAPN:
+Church St & Market St:
+22nd_street:
+Third Street & Williams Ave:
+san_francisco:
+sunnyvale:
+place_SANL:
+place_19TH:
+place_SSAN:
+Taraval St & 30th Ave:
+Van Ness Station Outbound:
+Third Street & Carroll Ave:
+19th Ave & Holloway Ave:
+place_DUBL:
+PS_DIRD:
+PS_KRNA:
+PS_BORR:
+place_ASHB:
+Church St & 29th St:
+Duboce St/Noe St/Duboce Park:
+PS_SFND:
+place_SFIA:
+Judah St & 43rd Ave:
+bayshore:
+9th Ave & Irving St:
+Metro Castro Station/Downtown:place_CAST
+Chinatown - Rose Pak Station:
+San Jose Ave & Farallones St:
+PS_TRSA:
+place_RICH:
+Third Street/Revere/Shafter:
+Judah St & 12th Ave:
+Third Street & Le Conte Ave:
+Sunset Tunnel East Portal:
+place_DALY:
+Metro Church Station/Downtown:
+PS_NASA:
+Ocean Ave & Fairfield Way:
+hillsdale:
+PS_FAIR:
+san_martin:
+Metro Powell Station/Outbound:place_POWL
+Right Of Way/Ocean Ave:
+PS_LOCK:
+place_SBRN:
+PS_ROAK:
+30th St & Dolores St:
+PS_CISC:
+PS_CONV:
+PS_SNLL:
+place_WOAK:
+Metro Montgomery Station/Downtown:place_MONT
+Judah St & 31st Ave:
+place_COLS:
+PS_CRSS:
+PS_COMP:
+sj_diridon:
+Carl St & Stanyan St:
+place_COLM:
+PS_OLDI:
+PS_MIDD:
+PS_OHLO:
+Judah St & 25th Ave:
+Santa Clara Station:
+place_MONT:
+california_ave:
+place_NBRK:
+Taraval St & 23rd Ave:
+Bayshore Blvd & Areta Ave:
+place_EMBR:
+Irving St & 6th Ave:
+Judah St & 23rd Ave:
+San Jose Ave/Glen Park Station:
+Taraval St & 22nd Ave:
+place_PHIL:
+Taraval St & 44th Ave:
+Judah St & 40th Ave:
+Fourth Street & Brannan Northbound:
+place_LAFY:
+Taraval St & 40th Ave:
+Right Of Way/21st St:
+Third Street & Marin St:
+place_CONC:
+Third Street & Mission Rock St:
+place_POWL:
+place_DBRK:
+Third Street & 20th St:
+Metro Powell Station/Downtown:place_POWL
+Yerba Buena/Moscone Station Southbound:
+15th Ave & Taraval St:
+PS_BASC:
+hayward_park:
+Carl St & Cole St:
+college_park:
+PS_CHMP:
+Ocean Ave & Dorado Ter:
+Broad St & Capitol Ave:
+Church St & 18th St:
+San Jose Ave & Randall St:
+King St & 4th St:san_francisco
+PS_RACE:
+place_CAST:
+The Embarcadero & Brannan St:
+PS_TAMN:
+Taraval St & 17th Ave:
+PS_GISH:
+Church St & 30th St:
+place_ROCK:
+PS_MKEE:
+PS_CTTL:
+menlo_park:
+Judah St & 16th Ave:
+PS_LICK:
+PS_BONA:
+place_SHAY:
+Right Of Way/20th St:
+place_16TH:
+Judah St & Sunset Blvd:
+place_ANTC:
+Irving St & Arguello Blvd:
+Metro Civic Center Station/Downtn:place_CIVC
+Judah St & 9th Ave:
+West Portal/Sloat/St Francis Circle:
+Carl St & Hillway Ave:
+san_carlos:
+PS_CROP:
+PS_BRRS:
+blossom_hill:
+4th & Brannan Southbound:
+Randolph St & Bright St:
+Church St & Duboce Ave:
+Judah St & 46th Ave:
+Metro Forest Hill Station/Downtown:
+Wawona/46th Ave /SF Zoo:
+PS_VIEN:
+19th Ave & Randolph St:
+San Jose Ave & Geneva Ave:
+UCSF / Chase Center (16th Street):
+place_FRMT:
+Third Street & 23rd St:
+Taraval St & 42nd Ave:
+place_CIVC:
+San Jose Ave & Niagra Ave:
+Irving St & 5th Ave:
+Church St & 22nd St:
+place_BAYF:
+San Jose Ave & Ocean Ave:
+Church St & 16th St:
+San Jose Ave & Lakeview Ave:
+PS_PENC:
+West Portal Station:
+place_LAKE:
+Ocean Ave/CCSF Pedestrian Bridge:
+mountain_view:
+Metro Van Ness Station:
+place_UCTY:
+47th Ave & Cutler Ave:
+PS_GRAM:
+Church St & 26th St:
+Third Street/Kirkwood/La Salle:
+PS_HAML:
+Ulloa St & 14th Ave:
+Metro Church Station/Outbound:
+Metro Civic Center Station/Outbd:place_CIVC
+Judah St & 15th Ave:
+Bayshore Blvd & Blanken Ave:
+capitol:
+Metro Castro Station/Outbound:place_CAST
+Ocean Ave & Aptos Ave:
+place_DELN:
+King St & 2nd St:
+Judah St & 22nd Ave:
+place_PCTR:
+Union Square/Market St Station Northbound:
