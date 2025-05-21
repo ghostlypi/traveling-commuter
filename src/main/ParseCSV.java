@@ -17,6 +17,20 @@ public class ParseCSV {
 
     public static HashMap<String, String> nameMap = new HashMap<>();
 
+    public static void parse_nameMap(Path fname) {
+        try {
+            String file = Files.readString(fname);
+            ArrayList<String> lines = new ArrayList(Arrays.asList(file.split("\n")));
+            for (String line : lines) {
+                String[] splitLine = line.split(":");
+                if ( splitLine.length == 2) {
+                    nameMap.put(splitLine[0], splitLine[1]);
+                }
+            }
+        } catch (IOException e) {
+        }
+    }
+
     public static void parse_stations(Path fname, ArrayList<String> lines, HashMap<String, Station> stations) {
         String[] header = lines.get(0).split("/");
         Service s = Service.parse_service(fname.getFileName().toString().split("\\.")[0].toUpperCase(),
@@ -30,15 +44,18 @@ public class ParseCSV {
                 System.out.println("CSV Length Mismatch!");
             }
 
-            Station next = stations.getOrDefault(nxt[0], new Station(nxt[0]));
-            Station curr = stations.getOrDefault(cur[0], new Station(cur[0]));
+            String nxxt = nameMap.getOrDefault(nxt[0], nxt[0]);
+            String cuur = nameMap.getOrDefault(cur[0], cur[0]);
+
+            Station next = stations.getOrDefault(nxxt, new Station(nxxt));
+            Station curr = stations.getOrDefault(cuur, new Station(cuur));
 
             for (int j = 2; j < cur.length; j++) {
                 curr.addEntry(next, s, cur[j], nxt[j]);
             }
             if (!s.equals(Service.ERROR)) {
-                stations.put(nxt[0], next);
-                stations.put(cur[0], curr);
+                stations.put(nxxt, next);
+                stations.put(cuur, curr);
             }
         }
     }
