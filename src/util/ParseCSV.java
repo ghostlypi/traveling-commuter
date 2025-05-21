@@ -1,6 +1,8 @@
-package main;
+package util;
 
 import javafx.util.Pair;
+import rail.Service;
+import rail.Station;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -36,6 +38,9 @@ public class ParseCSV {
         Service s = Service.parse_service(fname.getFileName().toString().split("\\.")[0].toUpperCase(),
                                           header[0].toUpperCase());
 
+        if (s.equals(new Service(Service.ERROR))) {
+            return;
+        }
 
         for (int i = 1; i < lines.size()-1; i++) {
             String cur[] = lines.get(i).split(",");

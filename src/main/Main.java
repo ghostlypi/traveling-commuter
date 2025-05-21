@@ -1,9 +1,11 @@
 package main;
 
 import javafx.util.Pair;
+import rail.Journey;
+import rail.Station;
+import util.ParseCSV;
+import util.Quadruple;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -11,6 +13,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class Main {
 
     public static HashMap<String, Station> stations = new HashMap<>();
+    public static Quadruple out = new Quadruple(Integer.MAX_VALUE, new HashSet<>(), null, new ArrayList<>());
 
     public static void init() {
         ParseCSV.parse_nameMap(Paths.get("resources/names.map"));
@@ -18,7 +21,7 @@ public class Main {
         System.out.println(stations.size());
     }
 
-    public ArrayList<Journey> djikstra(Station head, int time, HashSet<Station> visited) {
+    public static ArrayList<Journey> djikstra(Station head, int time, HashSet<Station> visited) {
         HashMap<Station, Integer> dist = new HashMap<Station, Integer>();
         HashMap<Station, Journey> prev = new HashMap<Station, Journey>();
 
@@ -48,9 +51,13 @@ public class Main {
                 if (!visited.contains(v)) {
                     ArrayList<Journey> route = new ArrayList<>();
                     Station cursor = v;
-                    while (!cursor.equals(head)) {
-                        route.add(prev.get(cursor));
-                        cursor = prev.get(cursor).start;
+                    while (cursor != null) {
+                        if (prev.get(cursor) != null) {
+                            route.add(prev.get(cursor));
+                            cursor = prev.get(cursor).start;
+                        } else {
+                            cursor = null;
+                        }
                     }
                     return route;
                 }
@@ -62,15 +69,23 @@ public class Main {
     public static void main(String[] args) {
         init();
         Station run_start = stations.get("gilroy");
-        Queue<Quadruple> work_queue = new ConcurrentLinkedQueue<>();
+        ConcurrentLinkedQueue<Quadruple> work_queue = new ConcurrentLinkedQueue<>();
         work_queue.add(new Quadruple(0, new HashSet<>(Arrays.asList(new Station[]{run_start})), run_start, new ArrayList<>()));
-        while (!work_queue.isEmpty()) {
-            Quadruple packet = work_queue.remove();
-            int time = packet.time;
-            HashSet<Station> visited = packet.visited;
-            Station cursor = packet.cursor;
-            ArrayList<Journey> path = packet.path;
 
+        ArrayList<Worker> workers = new ArrayList<>();
+        for (int i = 0; i < 23; i++) {
+            workers.add(new Worker(work_queue));
+            workers.get(i).start();
         }
+
+        // Using a standalone main thread for efficient monitoring + everything syncs to main
+        while (!work_queue.isEmpty()) {
+            System.out.print("\u001b[2K" + "Queue Size: " + work_queue.size() + "\r");
+        }
+
+        System.out.println(out.time);
+        System.out.println(out.visited.size());
+        System.out.println(out.path);
+
     }
 }

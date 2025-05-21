@@ -1,4 +1,4 @@
-package main;
+package rail;
 
 public class Service {
 
@@ -81,6 +81,41 @@ public class Service {
         switch (code) {
             case VTA.ORANGE:
                 return "VTA.ORANGE";
+            case VTA.BLUE:
+                return "VTA.BLUE";
+            case VTA.GREEN:
+                return "VTA.GREEN";
+            case BART.BLUE:
+                return "BART.BLUE";
+            case BART.ORANGE:
+                return "BART.ORANGE";
+            case BART.RED:
+                return "BART.RED";
+            case BART.YELLOW:
+                return "BART.YELLOW";
+            case BART.GREEN:
+                return "BART.GREEN";
+            case MUNI.J:
+                return "MUNI.J";
+            case MUNI.K:
+                return "MUNI.K";
+            case MUNI.N:
+                return "MUNI.N";
+            case MUNI.L:
+                return "MUNI.L";
+            case MUNI.M:
+                return "MUNI.M";
+            case MUNI.T:
+                return "MUNI.T";
+            case CALTRAIN.GILROY:
+                return "CALTRAIN.GILROY";
+            case CALTRAIN.EXPRESS:
+                return "CALTRAIN.EXPRESS";
+            case CALTRAIN.LOCAL:
+                return "CALTRAIN.LOCAL";
+            case CALTRAIN.LIMITED:
+                return "CALTRAIN.LIMITED";
+
             default:
                 return "ERROR";
         }

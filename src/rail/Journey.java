@@ -1,6 +1,4 @@
-package main;
-
-import java.time.LocalTime;
+package rail;
 
 public class Journey {
     public Station start;

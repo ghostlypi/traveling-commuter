@@ -1,4 +1,7 @@
-package main;
+package util;
+
+import rail.Journey;
+import rail.Station;
 
 public class Quadruple {
     public int time;

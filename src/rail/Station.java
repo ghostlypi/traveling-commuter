@@ -1,7 +1,5 @@
-package main;
+package rail;
 
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -28,6 +26,24 @@ public class Station {
         }
         if (st != -1 && et != -1 && !s.equals(Service.ERROR))
             schedule.add(new Journey(this, s, st, et, service));
+    }
+
+    public Journey next_train(Station s, int time) {
+        ArrayList<Journey> schedule = timetable.get(s);
+        Journey next = null;
+        for (Journey j : schedule) {
+            if (j.departure >= time && (next == null || j.departure < next.departure)) {
+                next = j;
+            }
+        }
+        if (next == null) {
+            try {
+                throw new RuntimeException("Unable to find a train from " + this + " to " + s + " at time " + time + "!");
+            } catch (RuntimeException e) {
+                e.printStackTrace();
+            }
+        }
+        return next;
     }
 
     public String toString() {
