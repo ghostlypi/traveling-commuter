@@ -29,11 +29,11 @@ santa_clara:
 place_FTVL:
 PS_MILP:place_MLPT
 south_sf:
-4th St & King St:
+4th St & King St:san_francisco
 san_bruno:
 19th Ave & Winston Dr:
 PS_WINC:
-Forest Hill Station Outbound:
+Forest Hill Station Outbound:Metro Forest Hill Station
 san_antonio:
 Metro Embarcadero Station:place_EMBR
 Church St & 24th St:
@@ -70,11 +70,11 @@ Judah St & 19th Ave:
 San Jose Ave & Santa Ynez Ave:
 San Jose Ave & Santa Rosa Ave:
 Taraval St & 26th Ave:
-Broad St & Orizaba Ave:
+Broad St & Orizaba Ave:Orizaba Ave & Broad St
 place_12TH:
 Taraval St & 19th Ave:
 PS_CPTL:
-Yerba Buena/Moscone Station Northbound:
+Yerba Buena/Moscone Station Northbound:Yerba Buena/Moscone Station
 Broad St & Plymouth Ave:
 PS_WHIS:
 Church St & 28th St:
@@ -97,7 +97,7 @@ PS_REAM:
 PS_ORCH:
 Third Street & Evans Ave:
 PS_TASM:
-Union Square/Market St Station Southbound:
+Union Square/Market St Station Southbound:Union Square/Market St Station
 Judah St & 34th Ave:
 Ocean Ave & Jules Ave:
 Duboce Ave & Church St:
@@ -115,7 +115,7 @@ place_SANL:
 place_19TH:
 place_SSAN:
 Taraval St & 30th Ave:
-Van Ness Station Outbound:
+Van Ness Station Outbound:Metro Van Ness Station
 Third Street & Carroll Ave:
 19th Ave & Holloway Ave:
 place_DUBL:
@@ -140,7 +140,7 @@ Judah St & 12th Ave:
 Third Street & Le Conte Ave:
 Sunset Tunnel East Portal:
 place_DALY:
-Metro Church Station/Downtown:
+Metro Church Station/Downtown:Metro Church Station
 PS_NASA:
 Ocean Ave & Fairfield Way:
 hillsdale:
@@ -182,7 +182,7 @@ Taraval St & 22nd Ave:
 place_PHIL:
 Taraval St & 44th Ave:
 Judah St & 40th Ave:
-Fourth Street & Brannan Northbound:
+Fourth Street & Brannan Northbound:4th & Brannan
 place_LAFY:
 Taraval St & 40th Ave:
 Right Of Way/21st St:
@@ -193,7 +193,7 @@ place_POWL:
 place_DBRK:
 Third Street & 20th St:
 Metro Powell Station/Downtown:place_POWL
-Yerba Buena/Moscone Station Southbound:
+Yerba Buena/Moscone Station Southbound:Yerba Buena/Moscone Station
 15th Ave & Taraval St:
 PS_BASC:
 hayward_park:
@@ -233,16 +233,16 @@ san_carlos:
 PS_CROP:
 PS_BRRS:
 blossom_hill:
-4th & Brannan Southbound:
+4th & Brannan Southbound:4th & Brannan
 Randolph St & Bright St:
-Church St & Duboce Ave:
+Church St & Duboce Ave:Duboce Ave & Church St
 Judah St & 46th Ave:
-Metro Forest Hill Station/Downtown:
+Metro Forest Hill Station/Downtown:Metro Forest Hill Station
 Wawona/46th Ave /SF Zoo:
 PS_VIEN:
 19th Ave & Randolph St:
 San Jose Ave & Geneva Ave:
-UCSF / Chase Center (16th Street):
+UCSF / Chase Center (16th Street):UCSF / Chase Center (16th St)
 place_FRMT:
 Third Street & 23rd St:
 Taraval St & 42nd Ave:
@@ -267,7 +267,7 @@ Church St & 26th St:
 Third Street/Kirkwood/La Salle:
 PS_HAML:
 Ulloa St & 14th Ave:
-Metro Church Station/Outbound:
+Metro Church Station/Outbound:Metro Church Station
 Metro Civic Center Station/Outbd:place_CIVC
 Judah St & 15th Ave:
 Bayshore Blvd & Blanken Ave:
@@ -278,4 +278,4 @@ place_DELN:
 King St & 2nd St:
 Judah St & 22nd Ave:
 place_PCTR:
-Union Square/Market St Station Northbound:
+Union Square/Market St Station Northbound:Union Square/Market St Station
