@@ -2,10 +2,13 @@ package rail;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
 
 public class Station {
     public String name;
-    public HashMap<Station, ArrayList<Journey>> timetable;
+    public Hashtable<Station, ArrayList<Journey>> timetable;
+    public HashSet<Service> lines;
 
     public Station() {
         new Station("Unnamed");
@@ -13,19 +16,19 @@ public class Station {
 
     public Station(String name) {
         this.name = name;
-        timetable = new HashMap<>();
+        timetable = new Hashtable<>();
+        lines = new HashSet<>();
     }
 
     public void addEntry(Station s, Service service, String startTime, String endTime) {
-        ArrayList<Journey> schedule = timetable.get(s);
+        ArrayList<Journey> schedule = timetable.getOrDefault(s, new ArrayList<>());
         int st = startTime.equals("null") ? -1 : Integer.parseInt(startTime);
         int et = endTime.equals("null") ? -1 : Integer.parseInt(endTime);
-        if (schedule == null) {
-            schedule = new ArrayList<>();
-            timetable.put(s, schedule);
-        }
-        if (st != -1 && et != -1 && !s.equals(Service.ERROR))
+        if (st != -1 && et != -1 && !service.equals(Service.ERROR)) {
             schedule.add(new Journey(this, s, st, et, service));
+            lines.add(service);
+        }
+        timetable.put(s, schedule);
     }
 
     public Journey next_train(Station s, int time) {
@@ -37,13 +40,27 @@ public class Station {
             }
         }
         if (next == null) {
+//            System.err.println("Unable to find a train from " + this + " to " + s + " after time " + time + "!");
+        }
+        return next;
+    }
+
+    public Journey prev_train(Station s, int time) {
+        ArrayList<Journey> schedule = timetable.get(s);
+        Journey prev = null;
+        for (Journey j : schedule) {
+            if (j.arrival <= time && (prev == null || j.arrival > prev.arrival)) {
+                prev = j;
+            }
+        }
+        if (prev == null) {
             try {
-                throw new RuntimeException("Unable to find a train from " + this + " to " + s + " at time " + time + "!");
+                throw new RuntimeException("Unable to find a train from " + this + " to " + s + " before time " + time + "!");
             } catch (RuntimeException e) {
                 e.printStackTrace();
             }
         }
-        return next;
+        return prev;
     }
 
     public String toString() {

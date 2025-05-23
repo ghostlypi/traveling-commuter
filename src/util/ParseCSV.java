@@ -34,11 +34,11 @@ public class ParseCSV {
     }
 
     public static void parse_stations(Path fname, ArrayList<String> lines, HashMap<String, Station> stations) {
-        String[] header = lines.get(0).split("/");
+        String[] header = lines.getFirst().split("/");
         Service s = Service.parse_service(fname.getFileName().toString().split("\\.")[0].toUpperCase(),
                                           header[0].toUpperCase());
 
-        if (s.equals(new Service(Service.ERROR))) {
+        if (s.equals(Service.ERROR)) {
             return;
         }
 
@@ -46,7 +46,8 @@ public class ParseCSV {
             String cur[] = lines.get(i).split(",");
             String nxt[] = lines.get(i+1).split(",");
             if (nxt.length != cur.length) {
-                System.out.println("CSV Length Mismatch!");
+                System.err.println("CSV Length Mismatch!");
+                System.out.println(cur[0] + " " + nxt.length + " " + cur.length);
             }
 
             String nxxt = nameMap.getOrDefault(nxt[0], nxt[0]);
@@ -73,7 +74,7 @@ public class ParseCSV {
                     .filter(Files::isRegularFile) // Keep only regular files
                     .map(filePath -> {
                         try {
-                            return new Pair<Path, String>(filePath, Files.readString(filePath, StandardCharsets.UTF_8));
+                            return new Pair<>(filePath, Files.readString(filePath, StandardCharsets.UTF_8));
                         } catch (IOException e) {
                             e.printStackTrace();
                             return null;

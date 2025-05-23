@@ -1,5 +1,7 @@
 package rail;
 
+import java.util.HashMap;
+
 public class Service {
 
     public static final int ERROR = -1;
@@ -59,16 +61,23 @@ public class Service {
         }
     }
 
+    public static class WALK extends Service {
+        public static final int OCEAN_BEACH = 20;
+        public static final int BAYSHORE = 21;
+        public static final int TWENTY = 22;
+
+        private WALK(int code) {
+            super(code);
+        }
+    }
+
     public final int code;
 
     public Service(int code) {
         this.code = code;
     }
 
-    public boolean isMuni() {
-        return  4 < code && code < 11;
-    }
-
+    @Override
     public boolean equals(Object o) {
         if (o instanceof Service)
             return ((Service) o).code == code;
@@ -77,6 +86,12 @@ public class Service {
         return false;
     }
 
+    @Override
+    public int hashCode() {
+        return code;
+    }
+
+    @Override
     public String toString() {
         switch (code) {
             case VTA.ORANGE:
@@ -189,7 +204,27 @@ public class Service {
                     default:
                         return new Service(Service.ERROR);
                 }
+
+            case "WALK":
+                switch (line) {
+                    case "OCEAN BEACH - SF ZOO (N)":
+                        return new Service(WALK.OCEAN_BEACH);
+                    case "OCEAN BEACH - SF ZOO (S)":
+                        return new Service(WALK.OCEAN_BEACH);
+                    case "BAYSHORE - SUNNYDALE (N)":
+                        return new Service(WALK.BAYSHORE);
+                    case "BAYSHORE - SUNNYDALE (S)":
+                        return new Service(WALK.BAYSHORE);
+                    case "22ND STREET - 23RD STREET (N)":
+                        return new Service(WALK.TWENTY);
+                    case "22ND STREET - 23RD STREET (S)":
+                        return new Service(WALK.TWENTY);
+                    default:
+                        return new Service(Service.ERROR);
+
+                }
             default:
+                System.out.println("Unknown provider: " + provider + " line: " + line);
                 return new Service(Service.ERROR);
         }
     }
